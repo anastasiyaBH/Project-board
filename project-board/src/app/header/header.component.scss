@@ -1,0 +1,11 @@
+header {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #b3ffcc;
+
+  h1, button{
+    margin: auto 0;
+  }
+}

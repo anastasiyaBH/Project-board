@@ -7,8 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  @Output()search = new EventEmitter<string>();
   public searchCriterion: string;
+  @Output()public search = new EventEmitter<string>();
 
   constructor() { }
 

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'project-board';
+  public searchCriterion: string;
+
+  public handleSearch(criterion: string) {
+    this.searchCriterion = criterion;
+  }
 }

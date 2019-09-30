@@ -1,6 +1,8 @@
 <mat-toolbar>
-  <mat-form-field>
-    <input matInput  [(ngModel)]="searchCriterion" type="search">
-    <button mat-button (search)="handleSearch()"> Search </button>
+  <mat-form-field >
+    <form (submit)="handleSearch()">
+    <input matInput  [(ngModel)]="searchCriterion" name="searchCriterion">
+    <button mat-button type="submit"> Search </button>
+  </form>
   </mat-form-field>
 </mat-toolbar>

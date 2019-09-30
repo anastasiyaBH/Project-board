@@ -14,6 +14,9 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule, DateAdapter} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,10 +34,12 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatToolbarModule,
     MatInputModule,
-    FormsModule
-
+    FormsModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
-  providers: [],
+  providers: [MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

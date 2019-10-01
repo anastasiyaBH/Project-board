@@ -9,14 +9,20 @@ import { IUser } from '../models/IUser';
 })
 export class CardItemComponent {
   @Input () public card: ICard;
-  @Input() public isDone: boolean;
-  @Output() removeCard = new EventEmitter<ICard>()
+  @Output() removeCard = new EventEmitter<ICard>();
+  public isExpanded: boolean;
 
-  constructor() {}
+  constructor() {
+    this.isExpanded = false;
+  }
 
   onRemoveCard() {
     console.log("button remove");
     this.removeCard.emit(this.card);
+  }
+
+  expandCard() {
+    this.isExpanded = !this.isExpanded;
   }
 
 }

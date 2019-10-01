@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardListComponent } from '../card-list/card-list.component'
+import { ICardList } from '../models/ICardList';
 
 @Component({
   selector: 'app-board',
@@ -8,7 +8,7 @@ import { CardListComponent } from '../card-list/card-list.component'
 })
 export class BoardComponent {
   @Input() public searchCriterion: string;
-  public cardLists: CardListComponent[];
+  public cardLists: ICardList[];
 
   constructor() {
     this.cardLists = [
@@ -24,7 +24,8 @@ export class BoardComponent {
           {
             id: '12',
             name: 'Title12',
-            description: 'description 2'
+            description: 'description 2',
+            isDone: true,
           },
           {
             id: '13',
@@ -41,7 +42,8 @@ export class BoardComponent {
           {
             id: '21',
             name: 'Title21',
-            description: 'description 1'
+            description: 'description 1',
+            isDone: true,
           },
           {
             id: '22',
@@ -51,7 +53,8 @@ export class BoardComponent {
           {
             id: '23',
             name: 'Title23',
-            description: 'description 3'
+            description: 'description 3',
+            isDone: true,
           },
         ],
         isDoneSection: false

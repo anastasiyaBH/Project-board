@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { ICard } from '../models/ICard';
 import { IUser } from '../models/IUser';
 
@@ -7,17 +7,14 @@ import { IUser } from '../models/IUser';
   templateUrl: './card-item.component.html',
   styleUrls: ['./card-item.component.scss']
 })
-export class CardItemComponent implements OnInit, ICard {
-  public id: string;
-  public name: string;
-  public description: string;
-  public dueDate: Date | string;
-  public assignee: IUser;
+export class CardItemComponent implements  ICard {
+  @Input () public id: string;
+  @Input () public name: string;
+  @Input () public description: string;
+  @Input () public dueDate: Date | string;
+  @Input () public assignee: IUser;
 
   constructor() {
  }
-
-  ngOnInit() {
-  }
 
 }

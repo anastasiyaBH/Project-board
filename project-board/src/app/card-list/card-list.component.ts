@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICardList } from '../models/ICardList';
 import { ICard } from '../models/ICard';
 
@@ -7,15 +7,11 @@ import { ICard } from '../models/ICard';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.scss']
 })
-export class CardListComponent implements OnInit, ICardList {
+export class CardListComponent implements ICardList {
 
-  public id: string;
-  public name: string;
-  public cards: ICard[];
+  @Input() public id: string;
+  @Input() public name: string;
+  @Input() public cards: ICard[];
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

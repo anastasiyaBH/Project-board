@@ -1,12 +1,10 @@
 <mat-card class="card" (click)="expandCard()" [appStyleCardBackground]="card.dueDate" [isDone]="card.isDone">
-  <mat-card-title  *ngIf="card.isDone" [ngStyle]="{'text-decoration':'line-through'}">{{card.name}}</mat-card-title>
-  <mat-card-title  *ngIf="!card.isDone">{{card.name}}</mat-card-title>
+  <mat-card-title *ngIf="card.isDone" [ngStyle]="{'text-decoration':'line-through'}">{{card.name}}</mat-card-title>
+  <mat-card-title *ngIf="!card.isDone">{{card.name}}</mat-card-title>
   <ng-container *ngIf="isExpanded">
     <mat-card-content>{{card.description}}</mat-card-content>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker>{{card.dueDate}}</mat-datepicker>
-    <mat-card-content>{{card.assignee}}</mat-card-content>
+    <time>{{ card.dueDate | date: 'mediumDate' }}</time>
+    <mat-card-content *ngIf="card.assignee">{{card.assignee.firstName}} {{card.assignee.lastName}}</mat-card-content>
     <mat-card-actions>
       <button>Edit</button>
       <button (click)="onRemoveCard()">Remove</button>

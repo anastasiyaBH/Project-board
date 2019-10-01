@@ -20,7 +20,13 @@ export class BoardComponent {
             id: '11',
             name: 'Title11',
             description: 'description 1',
-            dueDate: 'September 30, 2019 00:00:00'
+            dueDate: 'September 30, 2019 00:00:00',
+            assignee:
+            {
+              id: '999',
+              firstName: 'John',
+              lastName: 'Doe'
+            }
           },
           {
             id: '12',
@@ -32,7 +38,13 @@ export class BoardComponent {
           {
             id: '13',
             name: 'Title13',
-            description: 'description 3'
+            description: 'description 3',
+            assignee:
+            {
+              id: '999',
+              firstName: 'John',
+              lastName: 'Doe'
+            }
           },
         ],
         isDoneSection: true
@@ -46,6 +58,12 @@ export class BoardComponent {
             name: 'Title21',
             description: 'description 1',
             isDone: true,
+            assignee:
+            {
+              id: '999',
+              firstName: 'John',
+              lastName: 'Doe'
+            }
           },
           {
             id: '22',

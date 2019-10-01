@@ -12,11 +12,8 @@ export class StyleCardBackgroundDirective implements OnChanges {
   ngOnChanges() {
     const date = new Date(this.appStyleCardBackground);
     const currentDate = new Date();
-    console.log(currentDate) ;
-    console.log(date) ;
     const timeInterval = currentDate.getTime() - date.getTime();
     const daysInterval = Math.ceil(timeInterval / (1000 * 3600 * 24));
-    console.log('DIRECTIVE '+ daysInterval) ;
 
     if (daysInterval < 3 && !this.isDone) {
       this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', 'red');

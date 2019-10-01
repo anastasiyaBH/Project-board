@@ -7,11 +7,9 @@ import { ICard } from '../models/ICard';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.scss']
 })
-export class CardListComponent implements ICardList {
+export class CardListComponent {
 
-  @Input() public id: string;
-  @Input() public name: string;
-  @Input() public cards: ICard[];
+  @Input() public cardList: ICardList;
 
   constructor() { }
 }

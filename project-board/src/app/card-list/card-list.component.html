@@ -1,14 +1,8 @@
 <mat-card class="cardList">
-  <mat-card-title>{{name}}</mat-card-title>
-  <app-card-item *ngFor="let card of cards"
-  [id]="card.id"
-  [name]="card.name"
-  [description]="card.description"
-  [dueDate]="card.dueDate"
-  [assignee]="card.assignee"
-   ></app-card-item>
+  <mat-card-title>{{cardList.name}}</mat-card-title>
+  <app-card-item *ngFor="let card of cardList.cards" [card]="card"></app-card-item>
   <mat-card-actions>
       <button>+ Create card</button>
-    </mat-card-actions>
+  </mat-card-actions>
 
 </mat-card>

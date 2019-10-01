@@ -31,7 +31,8 @@ export class BoardComponent {
             name: 'Title13',
             description: 'description 3'
           },
-        ]
+        ],
+        isDoneSection: true
       },
       {
         id: '2',
@@ -52,7 +53,8 @@ export class BoardComponent {
             name: 'Title23',
             description: 'description 3'
           },
-        ]
+        ],
+        isDoneSection: false
       }
     ];
   }

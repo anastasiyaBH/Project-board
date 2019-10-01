@@ -2,7 +2,7 @@
   <mat-card-title>{{cardList.name}}</mat-card-title>
   <app-card-item *ngFor="let card of cardList.cards | filter: searchCriterion" [card]="card" (removeCard)="onRemoveCard($event)"></app-card-item>
   <mat-card-actions>
-      <button>+ Create card</button>
+      <button mat-raised-button color="warn">+ Create card</button>
   </mat-card-actions>
 
 </mat-card>

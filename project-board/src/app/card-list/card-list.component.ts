@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ICardList } from '../models/ICardList';
 import { ICard } from '../models/ICard';
 
@@ -10,6 +10,13 @@ import { ICard } from '../models/ICard';
 export class CardListComponent {
 
   @Input() public cardList: ICardList;
+  @Output() removeCard = new EventEmitter<ICard>();
 
-  constructor() { }
+  constructor() {}
+
+  onRemoveCard(card: ICard) {
+    let index = this.cardList.cards.indexOf(card);
+    console.log(index);
+    this.cardList.cards.splice(index,1);
+  }
 }

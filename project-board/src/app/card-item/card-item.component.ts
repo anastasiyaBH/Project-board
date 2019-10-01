@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output,EventEmitter} from '@angular/core';
 import { ICard } from '../models/ICard';
 import { IUser } from '../models/IUser';
 
@@ -10,8 +10,13 @@ import { IUser } from '../models/IUser';
 export class CardItemComponent {
   @Input () public card: ICard;
   @Input() public isDone: boolean;
+  @Output() removeCard = new EventEmitter<ICard>()
 
-  constructor() {
- }
+  constructor() {}
+
+  onRemoveCard() {
+    console.log("button remove");
+    this.removeCard.emit(this.card);
+  }
 
 }

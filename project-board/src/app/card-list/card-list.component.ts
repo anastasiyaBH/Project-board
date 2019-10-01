@@ -10,6 +10,7 @@ import { ICard } from '../models/ICard';
 export class CardListComponent {
 
   @Input() public cardList: ICardList;
+  @Input() searchCriterion: string;
   @Output() removeCard = new EventEmitter<ICard>();
 
   constructor() {}

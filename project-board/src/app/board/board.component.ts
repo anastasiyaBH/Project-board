@@ -19,13 +19,15 @@ export class BoardComponent {
           {
             id: '11',
             name: 'Title11',
-            description: 'description 1'
+            description: 'description 1',
+            dueDate: 'September 30, 2019 00:00:00'
           },
           {
             id: '12',
             name: 'Title12',
             description: 'description 2',
             isDone: true,
+            dueDate: 'September 29, 2019 00:00:00'
           },
           {
             id: '13',
@@ -48,7 +50,8 @@ export class BoardComponent {
           {
             id: '22',
             name: 'Title22',
-            description: 'description 2'
+            description: 'description 2',
+            dueDate: 'September 28, 2019 00:00:00'
           },
           {
             id: '23',

@@ -1,4 +1,4 @@
-<mat-card class="card" (click)="expandCard()">
+<mat-card class="card" (click)="expandCard()" [appStyleCardBackground]="card.dueDate" [isDone]="card.isDone">
   <mat-card-title  *ngIf="card.isDone" [ngStyle]="{'text-decoration':'line-through'}">{{card.name}}</mat-card-title>
   <mat-card-title  *ngIf="!card.isDone">{{card.name}}</mat-card-title>
   <ng-container *ngIf="isExpanded">

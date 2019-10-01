@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, DateAdapter} from '@angular/material';
 import { FilterPipe } from './pipes/filter.pipe';
+import { StyleCardBackgroundDirective } from './directives/style-card-background.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     CardListComponent,
     CardItemComponent,
     FooterComponent,
-    FilterPipe
+    FilterPipe,
+    StyleCardBackgroundDirective
   ],
   imports: [
     BrowserModule,

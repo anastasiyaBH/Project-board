@@ -3,11 +3,11 @@
   <mat-card-title *ngIf="!card.isDone">{{card.name}}</mat-card-title>
   <ng-container *ngIf="isExpanded">
     <mat-card-content>{{card.description}}</mat-card-content>
-    <time>{{ card.dueDate | date: 'mediumDate' }}</time>
+    <mat-card-content *ngIf="card.dueDate" >{{ card.dueDate | date: 'mediumDate' }}</mat-card-content>
     <mat-card-content *ngIf="card.assignee">{{card.assignee.firstName}} {{card.assignee.lastName}}</mat-card-content>
     <mat-card-actions>
-      <button>Edit</button>
-      <button (click)="onRemoveCard()">Remove</button>
+      <button mat-raised-button color="accent">Edit</button>
+      <button mat-raised-button color="accent" (click)="onRemoveCard()">Remove</button>
     </mat-card-actions>
   </ng-container>
 </mat-card>

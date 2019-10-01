@@ -16,9 +16,9 @@ export class StyleCardBackgroundDirective implements OnChanges {
     const daysInterval = Math.ceil(timeInterval / (1000 * 3600 * 24));
 
     if (daysInterval < 3 && !this.isDone) {
-      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', 'red');
+      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', '#ea0b0b');
     } else if (daysInterval < 7 && !this.isDone) {
-      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', 'yellow');
+      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', '#e8e101');
     }
 }
 }
